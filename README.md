@@ -1,7 +1,7 @@
 # ADPY-14-project_6_web_scrapping
 
 The project parses www.habr.com (https://habr.com/ru/all/) and gets the articles by keyword list.
-The result outputs in the following format: <date> - <header> - <URL>. 
+The result outputs in the following format: date - header - URL. 
 
 ## Description
 
