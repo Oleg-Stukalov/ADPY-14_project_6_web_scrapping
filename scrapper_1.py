@@ -2,10 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 
 # CONSTANTS
-KEYWORDS = ['дизайн', 'фото', 'web', 'python']
+KEYWORDS = ['дизайн', 'фото', 'web', 'python', 'JavaScript', 'JS']
 URL = 'https://habr.com/ru/all/'
 NL = '\n'
 
+keywords_lower = [element.lower() for element in KEYWORDS] ; keywords_lower
+#print(KEYWORDS, keywords_lower)
 
 # get URL
 result = requests.get(URL)
@@ -27,7 +29,7 @@ for article in articles:
        hub_lower = hub.text.lower()
        #print('hub_lower:', hub_lower)
        # ищем вхождение хотя бы одного желаемого хаба
-       if any([hub_lower in desired for desired in KEYWORDS]):
+       if any([hub_lower in desired for desired in keywords_lower]):
            title_element = article.find('a', class_='post__title_link')
            name = title_element.text
            url = title_element.attrs.get('href')
