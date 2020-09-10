@@ -6,7 +6,7 @@ KEYWORDS = ['дизайн', 'фото', 'web', 'python', 'JavaScript', 'JS']
 URL = 'https://habr.com/ru/all/'
 NL = '\n'
 
-keywords_lower = [element.lower() for element in KEYWORDS] ; keywords_lower
+keywords_lower = [element.lower() for element in KEYWORDS]
 #print(KEYWORDS, keywords_lower)
 
 # get URL
